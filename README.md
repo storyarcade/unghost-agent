@@ -24,12 +24,16 @@
 
 **Unghost Agent** is a community-driven, open-source AI framework designed to revolutionize personalized outreach. It combines advanced language models with specialized tools for deep prospect research, persona analysis, and strategic message crafting. Say goodbye to generic templates and hello to high-converting conversations.
 
-## ✨ Acknowledgements & Inspiration
+## 🎉 Join the Movement
 
-This project stands on the shoulders of giants.
+### 🐦 Follow [@heypeter1111](https://twitter.com/heypeter1111) for updates
+We drop new features faster than your prospects drop your emails (pre-Unghost)
 
-- **Kudos to DeerFlow**: Unghost Agent is a refactored and specialized version of the incredible [DeerFlow](https://github.com/bytedance/deer-flow) framework. We are immensely grateful to the original contributors for their foundational work.
-- 💡 **Inspiration**: The vision for Unghost Agent was sparked by [Bhavye Khetan's insight](https://x.com/bhavye_khetan/status/1929379775602373012) on AI's potential for personalized outreach and [Roy Lee's demonstration](https://x.com/im_roy_lee/status/1936138361011585190) of Cluely's innovative AI-powered hack assistance.
+### 💬 [Join our Discord](https://discord.gg/wzbBTDpxgE)
+Share your wins, get help, or just vibe with other unghosters
+
+### 🌟 Star this repo
+It makes us feel warm and fuzzy inside
 
 ## 🎯 Demo & Examples
 
@@ -261,22 +265,12 @@ This architecture ensures a thorough and strategic approach to creating highly e
 
 ---
 
-## 🎉 Join the Movement
+## ✨ Acknowledgements & Inspiration
 
-### 🐦 Follow [@heypeter1111](https://twitter.com/heypeter1111) for updates
-We drop new features faster than your prospects drop your emails (pre-Unghost)
+This project stands on the shoulders of giants.
 
-### 💬 [Join our Discord](https://discord.gg/wzbBTDpxgE)
-Share your wins, get help, or just vibe with other unghosters
-
-### 🌟 Star this repo
-It makes us feel warm and fuzzy inside
-
----
-
-## 🙏 Credits
-
-- Built on top of the legendary [DeerFlow](https://github.com/bytedance/deer-flow) framework.
+- **Kudos to DeerFlow**: Unghost Agent is a refactored and specialized version of the incredible [DeerFlow](https://github.com/bytedance/deer-flow) framework. We are immensely grateful to the original contributors for their foundational work.
+- 💡 **Inspiration**: The vision for Unghost Agent was sparked by [Bhavye Khetan's insight](https://x.com/bhavye_khetan/status/1929379775602373012) on AI's potential for personalized outreach and [Roy Lee's demonstration](https://x.com/im_roy_lee/status/1936138361011585190) of Cluely's innovative AI-powered hack assistance.
 - Inspired by everyone who's ever been ghosted (so, everyone).
 
 ---
