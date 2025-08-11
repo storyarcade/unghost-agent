@@ -37,23 +37,61 @@ This project stands on the shoulders of giants.
 
 Check out our main demo video to see how Unghost Agent transforms cold outreach:
 
+> **Main Demo:** [Watch on YouTube](https://youtu.be/Xby-GjTR6Fs?si=wIBZUbknh54FgzqH)
+
+<!-- To add a playable video directly in GitHub:
+1. Download the video file
+2. Drag and drop it into a GitHub issue in this repo
+3. Copy the generated URL
+4. Replace this comment with: 
+<video src="YOUR_GITHUB_VIDEO_URL" controls="controls" style="max-width: 100%;">
+</video>
+-->
+
 [![Unghost Agent Demo](https://img.youtube.com/vi/Xby-GjTR6Fs/maxresdefault.jpg)](https://youtu.be/Xby-GjTR6Fs?si=wIBZUbknh54FgzqH)
 
 ### 🚀 Example Use Cases
 
 See how Unghost Agent works across different scenarios:
 
+<table>
+<tr>
+<td width="50%">
+
 #### 1. Tech Startup Outreach
+[🎥 Watch Video](https://youtu.be/Lubsoq_A8UQ?si=tbLZLA4EkTQkX-y0)
+
 [![Tech Startup Example](https://img.youtube.com/vi/Lubsoq_A8UQ/mqdefault.jpg)](https://youtu.be/Lubsoq_A8UQ?si=tbLZLA4EkTQkX-y0)
 
+</td>
+<td width="50%">
+
 #### 2. Enterprise Sales Strategy
+[🎥 Watch Video](https://youtu.be/6pQ1YecwfLI?si=s-nLVv0MzWCJd8OL)
+
 [![Enterprise Sales Example](https://img.youtube.com/vi/6pQ1YecwfLI/mqdefault.jpg)](https://youtu.be/6pQ1YecwfLI?si=s-nLVv0MzWCJd8OL)
 
+</td>
+</tr>
+<tr>
+<td width="50%">
+
 #### 3. Creative Agency Prospecting
+[🎥 Watch Video](https://youtu.be/3az8LpQxxMo?si=9dh2DSbvP1FoXxuM)
+
 [![Creative Agency Example](https://img.youtube.com/vi/3az8LpQxxMo/mqdefault.jpg)](https://youtu.be/3az8LpQxxMo?si=9dh2DSbvP1FoXxuM)
 
+</td>
+<td width="50%">
+
 #### 4. SaaS Growth Hacking
+[🎥 Watch Video](https://youtu.be/BFuMQ5lWlDo?si=3xzx621zxm4A5yKq)
+
 [![SaaS Growth Example](https://img.youtube.com/vi/BFuMQ5lWlDo/mqdefault.jpg)](https://youtu.be/BFuMQ5lWlDo?si=3xzx621zxm4A5yKq)
+
+</td>
+</tr>
+</table>
 
 ## 🎬 Quick Start (2 Minutes, Seriously)
 
