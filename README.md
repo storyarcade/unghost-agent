@@ -24,6 +24,8 @@
 
 **Unghost Agent** is a community-driven, open-source AI framework designed to revolutionize personalized outreach. It combines advanced language models with specialized tools for deep prospect research, persona analysis, and strategic message crafting. Say goodbye to generic templates and hello to high-converting conversations.
 
+🚀 **Try it now at [unghost.online](https://unghost.online)** - No setup required!
+
 ## 🎉 Join the Movement
 
 ### 🐦 Follow [@heypeter1111](https://twitter.com/heypeter1111) for updates
