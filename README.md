@@ -37,54 +37,32 @@ This project stands on the shoulders of giants.
 
 Check out our main demo video to see how Unghost Agent transforms cold outreach:
 
-> **Main Demo:** [Watch on YouTube](https://youtu.be/Xby-GjTR6Fs?si=wIBZUbknh54FgzqH)
-
-<!-- To add a playable video directly in GitHub:
-1. Download the video file
-2. Drag and drop it into a GitHub issue in this repo
-3. Copy the generated URL
-4. Replace this comment with: 
-<video src="YOUR_GITHUB_VIDEO_URL" controls="controls" style="max-width: 100%;">
+<video src="https://github.com/storyarcade/unghost-agent/raw/main/videos/case-demo.mp4" controls width="100%" style="max-width: 800px;">
+  Your browser does not support the video tag. [Watch on YouTube](https://youtu.be/Xby-GjTR6Fs?si=wIBZUbknh54FgzqH)
 </video>
--->
-
-[![Unghost Agent Demo](https://img.youtube.com/vi/Xby-GjTR6Fs/maxresdefault.jpg)](https://youtu.be/Xby-GjTR6Fs?si=wIBZUbknh54FgzqH)
 
 ### 🚀 Example Use Cases
 
 See how Unghost Agent works across different scenarios:
-
-> ⚠️ **To enable native video playback in GitHub README:**
-> 1. Download these videos from YouTube
-> 2. Create a new issue in your repo
-> 3. Drag and drop the video files into the issue comment
-> 4. Copy the generated GitHub URLs
-> 5. Replace the sections below with: `<video src="URL" controls width="100%"></video>`
 
 <table>
 <tr>
 <td width="50%">
 
 #### 1. Coffee Meeting Outreach
-[🎥 Watch on YouTube](https://youtu.be/Lubsoq_A8UQ?si=tbLZLA4EkTQkX-y0)
 
-<!-- Replace with native video:
-<video src="https://github.com/storyarcade/unghost-agent/assets/YOUR_VIDEO.mp4" controls width="100%"></video>
--->
-
-[![Coffee Meeting Example](https://img.youtube.com/vi/Lubsoq_A8UQ/mqdefault.jpg)](https://youtu.be/Lubsoq_A8UQ?si=tbLZLA4EkTQkX-y0)
+<video src="https://github.com/storyarcade/unghost-agent/raw/main/videos/case1.MOV" controls width="100%">
+  Your browser does not support the video tag.
+</video>
 
 </td>
 <td width="50%">
 
-#### 2. VC Outreach Strategy
-[🎥 Watch on YouTube](https://youtu.be/6pQ1YecwfLI?si=s-nLVv0MzWCJd8OL)
+#### 2. VC Outreach Strategy (Elon Case)
 
-<!-- Replace with native video:
-<video src="https://github.com/storyarcade/unghost-agent/assets/YOUR_VIDEO.mp4" controls width="100%"></video>
--->
-
-[![VC Outreach Example](https://img.youtube.com/vi/6pQ1YecwfLI/mqdefault.jpg)](https://youtu.be/6pQ1YecwfLI?si=s-nLVv0MzWCJd8OL)
+<video src="https://github.com/storyarcade/unghost-agent/raw/main/videos/Elon-case2.MOV" controls width="100%">
+  Your browser does not support the video tag.
+</video>
 
 </td>
 </tr>
@@ -92,25 +70,19 @@ See how Unghost Agent works across different scenarios:
 <td width="50%">
 
 #### 3. Cold DM Strategy
-[🎥 Watch on YouTube](https://youtu.be/3az8LpQxxMo?si=9dh2DSbvP1FoXxuM)
 
-<!-- Replace with native video:
-<video src="https://github.com/storyarcade/unghost-agent/assets/YOUR_VIDEO.mp4" controls width="100%"></video>
--->
-
-[![Cold DM Example](https://img.youtube.com/vi/3az8LpQxxMo/mqdefault.jpg)](https://youtu.be/3az8LpQxxMo?si=9dh2DSbvP1FoXxuM)
+<video src="https://github.com/storyarcade/unghost-agent/raw/main/videos/case3.MOV" controls width="100%">
+  Your browser does not support the video tag.
+</video>
 
 </td>
 <td width="50%">
 
 #### 4. Friendly CEO Approach
-[🎥 Watch on YouTube](https://youtu.be/BFuMQ5lWlDo?si=3xzx621zxm4A5yKq)
 
-<!-- Replace with native video:
-<video src="https://github.com/storyarcade/unghost-agent/assets/YOUR_VIDEO.mp4" controls width="100%"></video>
--->
-
-[![Friendly CEO Example](https://img.youtube.com/vi/BFuMQ5lWlDo/mqdefault.jpg)](https://youtu.be/BFuMQ5lWlDo?si=3xzx621zxm4A5yKq)
+<video src="https://github.com/storyarcade/unghost-agent/raw/main/videos/case4.MOV" controls width="100%">
+  Your browser does not support the video tag.
+</video>
 
 </td>
 </tr>
