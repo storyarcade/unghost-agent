@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="faviconGhost" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4F46E5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6366F1;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Simplified Ghost Body for Favicon -->
+  <path d="M16 4 C12 4 8 7 8 11 L8 24 C8 26 9 27 10 27 C11 27 12 26 13 25 C14 26 15 26 16 25 C17 26 18 26 19 25 C20 26 21 27 22 27 C23 27 24 26 24 24 L24 11 C24 7 20 4 16 4 Z" 
+        fill="url(#faviconGhost)"/>
+  
+  <!-- Simple Eyes -->
+  <circle cx="13" cy="13" r="1.5" fill="#1F2937"/>
+  <circle cx="19" cy="13" r="1.5" fill="#1F2937"/>
+  
+  <!-- Message Indicator -->
+  <circle cx="23" cy="9" r="4" fill="#10B981"/>
+  <circle cx="23" cy="9" r="2" fill="white"/>
+</svg> 

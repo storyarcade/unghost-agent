@@ -1,0 +1,88 @@
+{
+  "template_scenarios": [
+    {
+      "id": "template_friendly_001",
+      "template_id": "T01",
+      "use_case": "Creator collaboration",
+      "test_data": {
+        "name": "Emma Watson",
+        "topic": "sustainable fashion"
+      },
+      "expected_tone": "Friendly",
+      "max_length": 280,
+      "evaluation_criteria": {
+        "contains_compliment": true,
+        "shows_collaboration_interest": true,
+        "under_character_limit": true,
+        "friendly_tone": true
+      }
+    },
+    {
+      "id": "template_confident_002",
+      "template_id": "T02",
+      "use_case": "SaaS B2B Outreach",
+      "test_data": {
+        "company": "TechStartup Inc",
+        "value": "35%"
+      },
+      "expected_tone": "Confident",
+      "evaluation_criteria": {
+        "mentions_similar_company": true,
+        "includes_specific_value": true,
+        "asks_for_video_permission": true,
+        "confident_tone": true
+      }
+    },
+    {
+      "id": "template_warm_003",
+      "template_id": "T03",
+      "use_case": "Intro via community",
+      "test_data": {
+        "community": "Product Hunt Makers",
+        "name": "John Smith"
+      },
+      "expected_tone": "Warm/Formal",
+      "evaluation_criteria": {
+        "references_community": true,
+        "mentions_recent_post": true,
+        "offers_help": true,
+        "asks_permission": true
+      }
+    },
+    {
+      "id": "template_curious_004",
+      "template_id": "T04",
+      "use_case": "Discovery conversation",
+      "test_data": {
+        "process/tool": "customer onboarding"
+      },
+      "expected_tone": "Curious",
+      "evaluation_criteria": {
+        "asks_discovery_question": true,
+        "open_ended": true,
+        "curious_tone": true,
+        "about_specific_challenge": true
+      }
+    },
+    {
+      "id": "template_playful_005",
+      "template_id": "T05",
+      "use_case": "Startup founder DM",
+      "test_data": {},
+      "expected_tone": "Playful",
+      "evaluation_criteria": {
+        "uses_humor": true,
+        "breaks_pattern": true,
+        "includes_witty_line": true,
+        "playful_tone": true
+      }
+    }
+  ],
+  "evaluation_weights": {
+    "tone_match": 0.25,
+    "criteria_fulfillment": 0.35,
+    "personalization": 0.20,
+    "clarity": 0.10,
+    "authenticity": 0.10
+  }
+}

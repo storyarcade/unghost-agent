@@ -1,0 +1,64 @@
+{
+  "unghost-agent-logos": {
+    "version": "1.0.0",
+    "created": "2025-01-15",
+    "brand": "Unghost Agent",
+    "description": "Professional AI-powered cold outreach platform logos",
+    "assets": {
+      "main-logo": {
+        "file": "unghost-agent-logo.svg",
+        "size": "400x400px",
+        "fileSize": "2.3KB",
+        "usage": "Primary brand logo for large displays, headers, and promotional materials",
+        "colors": ["#4F46E5", "#6366F1", "#10B981", "#34D399"],
+        "features": ["Ghost body with gradient", "Message bubble", "Friendly expression", "Circuit patterns"]
+      },
+      "horizontal-logo": {
+        "file": "unghost-agent-horizontal.svg", 
+        "size": "600x200px",
+        "fileSize": "2.2KB",
+        "usage": "Horizontal layouts, email signatures, wide header spaces",
+        "colors": ["#4F46E5", "#6366F1", "#10B981", "#34D399", "#1F2937"],
+        "features": ["Ghost icon + text", "Inter font family", "Two-tone text treatment"]
+      },
+      "icon-only": {
+        "file": "unghost-agent-icon.svg",
+        "size": "200x200px", 
+        "fileSize": "1.8KB",
+        "usage": "App icons, social media avatars, compact spaces",
+        "colors": ["#4F46E5", "#6366F1", "#10B981", "#34D399"],
+        "features": ["Clean icon design", "Ghost with message indicator", "Optimized for small sizes"]
+      },
+      "favicon": {
+        "file": "unghost-agent-favicon.svg",
+        "size": "32x32px",
+        "fileSize": "899B", 
+        "usage": "Browser tabs, bookmarks, PWA icons",
+        "colors": ["#4F46E5", "#6366F1", "#10B981"],
+        "features": ["Simplified ghost", "Message dot indicator", "16px visibility optimized"]
+      }
+    },
+    "implementation": {
+      "primary-component": "front/src/components/unghost-agent/logo.tsx",
+      "favicon-config": "front/src/app/layout.tsx",
+      "asset-path": "/images/",
+      "format": "SVG",
+      "browser-support": "All modern browsers with SVG support"
+    },
+    "brand-guidelines": {
+      "color-palette": {
+        "primary": "#4F46E5 to #6366F1 (Ghost Blue gradient)",
+        "secondary": "#10B981 to #34D399 (Communication Green gradient)",
+        "text": "#1F2937 (Charcoal)",
+        "background": "#FFFFFF (White)"
+      },
+      "usage-guidelines": [
+        "Maintain minimum 16px height for favicon visibility",
+        "Use horizontal version for wide layouts (aspect ratio >2:1)",
+        "Icon-only version for square or compact spaces",
+        "Always preserve gradient colors and proportions",
+        "Ensure adequate white space around logo"
+      ]
+    }
+  }
+} 

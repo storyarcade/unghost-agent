@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unghost Outreach Benchmark Report</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f7fa;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        h1, h2, h3, h4 {
+            color: #2c3e50;
+            margin-top: 2em;
+        }
+        h1 {
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .metric-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .metric-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .metric-box:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        }
+        .metric-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #3498db;
+            margin: 10px 0;
+        }
+        .metric-label {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .score-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-weight: bold;
+            color: white;
+            font-size: 0.9em;
+        }
+        .score-excellent { background: linear-gradient(135deg, #27ae60, #2ecc71); }
+        .score-good { background: linear-gradient(135deg, #2980b9, #3498db); }
+        .score-average { background: linear-gradient(135deg, #f39c12, #f1c40f); }
+        .score-poor { background: linear-gradient(135deg, #c0392b, #e74c3c); }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        th {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            letter-spacing: 0.5px;
+        }
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        tr:hover {
+            background-color: #e8f4f8;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 24px;
+            background-color: #ecf0f1;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            transition: width 0.3s ease;
+            position: relative;
+        }
+        .progress-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-weight: bold;
+            font-size: 0.85em;
+        }
+        .test-result {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .test-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .message-box {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            line-height: 1.8;
+            white-space: pre-wrap;
+        }
+        .context-box {
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .stats-row {
+            display: flex;
+            gap: 20px;
+            margin: 15px 0;
+            flex-wrap: wrap;
+        }
+        .stat-item {
+            background: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+        }
+        details {
+            margin: 15px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        summary {
+            font-weight: bold;
+            color: #2c3e50;
+            outline: none;
+        }
+        .emoji {
+            font-size: 1.2em;
+            margin-right: 5px;
+        }
+        .visual-bar {
+            display: inline-block;
+            width: 150px;
+            height: 20px;
+            background: #ecf0f1;
+            border-radius: 10px;
+            overflow: hidden;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+        .visual-fill {
+            height: 100%;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+<h1>🚀 Unghost Outreach Benchmark Report</h1>
+<p><strong>Generated:</strong> 2025-07-19 21:18:39</p>
+<p><strong>Backend URL:</strong> http://localhost:8000</p>
+<h2>📊 Executive Summary</h2>
+<div class="metric-grid">
+<div class="metric-box">
+<div class="metric-label">Success Rate</div>
+<div class="metric-value">100.0%</div>
+</div>
+<div class="metric-box">
+<div class="metric-label">Overall Score</div>
+<div class="metric-value">4.04</div>
+<span class="score-badge score-good">Good</span>
+</div>
+<div class="metric-box">
+<div class="metric-label">Avg Generation Time</div>
+<div class="metric-value">14.1s</div>
+</div>
+<div class="metric-box">
+<div class="metric-label">Tests Run</div>
+<div class="metric-value">10</div>
+</div>
+</div>
+<h2>📊 Evaluation Criteria Analysis</h2>
+<table>
+<tr><th>Criterion</th><th>Score</th><th>Visual</th><th>Weight</th></tr>
+<tr>
+<td>Personalization</td>
+<td>3.50/5.0</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill" style="width: 70.0%">
+<span class="progress-text">3.5</span>
+</div>
+</div>
+</td>
+<td>20%</td>
+</tr>
+<tr>
+<td>Goal Alignment</td>
+<td>4.00/5.0</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill" style="width: 80.0%">
+<span class="progress-text">4.0</span>
+</div>
+</div>
+</td>
+<td>15%</td>
+</tr>
+<tr>
+<td>Tone Appropriateness</td>
+<td>4.70/5.0</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill" style="width: 94.0%">
+<span class="progress-text">4.7</span>
+</div>
+</div>
+</td>
+<td>15%</td>
+</tr>
+<tr>
+<td>Clarity Readability</td>
+<td>5.00/5.0</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill" style="width: 100.0%">
+<span class="progress-text">5.0</span>
+</div>
+</div>
+</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>Cta Effectiveness</td>
+<td>3.60/5.0</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill" style="width: 72.0%">
+<span class="progress-text">3.6</span>
+</div>
+</div>
+</td>
+<td>15%</td>
+</tr>
+<tr>
+<td>Authenticity</td>
+<td>3.80/5.0</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill" style="width: 76.0%">
+<span class="progress-text">3.8</span>
+</div>
+</div>
+</td>
+<td>15%</td>
+</tr>
+<tr>
+<td>Relevance</td>
+<td>4.20/5.0</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill" style="width: 84.0%">
+<span class="progress-text">4.2</span>
+</div>
+</div>
+</td>
+<td>10%</td>
+</tr>
+</table>
+<h2>🔍 Detailed Test Results</h2>
+<div class="test-result">
+<div class="test-header">
+<h3>Test #1: Cold Email</h3>
+<span class="score-badge score-good">4.40/5.0</span>
+</div>
+<h4>Generated Message:</h4>
+<div class="message-box">
+Hi Michael,
+
+&gt; Congratulations on the recent Series B funding! That&#x27;s a significant milestone, and I know firsthand the challenges that come with scaling up quickly.
+
+&gt; As a fellow founder in the enterprise security space, I&#x27;ve been following Enterprise Solutions&#x27; progress with interest, especially your focus on cloud architecture and DevOps. At SecureScale, we&#x27;re helping companies like yours proactively reduce security incidents as they scale.
+
+&gt; I&#x27;d be interested in hearing about the security challenges you&#x27;re currently facing and sharing how SecureScale might be able to help. Would you be open to a brief chat sometime next week?
+
+&gt; Best regards,
+&gt; Emma Williams
+</div>
+<div class="stats-row">
+<div class="stat-item">📏 <strong>Words:</strong> 105</div>
+<div class="stat-item">🔤 <strong>Characters:</strong> 672</div>
+<div class="stat-item">⏱️ <strong>Generation Time:</strong> 9.85s</div>
+</div>
+<h4>Evaluation Breakdown:</h4>
+<table>
+<tr><th>Criterion</th><th>Score</th><th>Visual</th></tr>
+<tr>
+<td>Personalization</td>
+<td>4/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 80%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Goal Alignment</td>
+<td>4/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 80%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Tone Appropriateness</td>
+<td>5/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 100%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Clarity Readability</td>
+<td>5/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 100%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Cta Effectiveness</td>
+<td>4/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 80%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Authenticity</td>
+<td>4/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 80%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Relevance</td>
+<td>5/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 100%"></div></div>
+</td>
+</tr>
+</table>
+</div>
+<div class="test-result">
+<div class="test-header">
+<h3>Test #2: Instagram DM</h3>
+<span class="score-badge score-excellent">4.86/5.0</span>
+</div>
+<h4>Generated Message:</h4>
+<div class="message-box">
+Hi Lily,
+&gt;
+&gt; I came across your recent post about supporting sustainable brands, and I just had to reach out! I&#x27;m Sophie, the founder of [Sophie Martinez&#x27;s brand name], and we&#x27;re all about creating beautiful, eco-friendly fashion.
+&gt;
+&gt; Your content really resonates with our values, and I&#x27;d love to explore a potential collaboration. Perhaps a product review or a feature on our Instagram?
+&gt;
+&gt; No pressure at all, but I&#x27;d be thrilled to chat more if you&#x27;re interested.
+&gt;
+&gt; Best,
+&gt; Sophie
+</div>
+<div class="stats-row">
+<div class="stat-item">📏 <strong>Words:</strong> 86</div>
+<div class="stat-item">🔤 <strong>Characters:</strong> 486</div>
+<div class="stat-item">⏱️ <strong>Generation Time:</strong> 8.76s</div>
+</div>
+<h4>Evaluation Breakdown:</h4>
+<table>
+<tr><th>Criterion</th><th>Score</th><th>Visual</th></tr>
+<tr>
+<td>Personalization</td>
+<td>5/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 100%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Goal Alignment</td>
+<td>5/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 100%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Tone Appropriateness</td>
+<td>5/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 100%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Clarity Readability</td>
+<td>5/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 100%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Cta Effectiveness</td>
+<td>4/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 80%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Authenticity</td>
+<td>5/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 100%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Relevance</td>
+<td>5/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 100%"></div></div>
+</td>
+</tr>
+</table>
+</div>
+<div class="test-result">
+<div class="test-header">
+<h3>Test #3: Investor Pitch</h3>
+<span class="score-badge score-average">3.86/5.0</span>
+</div>
+<h4>Generated Message:</h4>
+<div class="message-box">
+Dear Dr. Wang,
+
+&gt; I hope this email finds you well.
+
+&gt; I&#x27;ve been following your work and Innovation Ventures&#x27; investments with great interest, particularly your recent publications on the intersection of AI and healthcare. As a founder with a previous healthtech exit and now building an AI-powered solution, I&#x27;m deeply immersed in this space and admire your firm&#x27;s vision.
+
+&gt; I&#x27;m currently raising a Series A round and would be grateful for the opportunity to briefly share some insights on current market trends and how our AI approach might align with Innovation Ventures&#x27; investment focus.
+
+&gt; Would you be open to a brief introductory call sometime next week?
+
+&gt; Thank you for your time and consideration.
+
+&gt; Best regards,
+
+&gt; [Sender&#x27;s Name]
+</div>
+<div class="stats-row">
+<div class="stat-item">📏 <strong>Words:</strong> 123</div>
+<div class="stat-item">🔤 <strong>Characters:</strong> 745</div>
+<div class="stat-item">⏱️ <strong>Generation Time:</strong> 8.93s</div>
+</div>
+<h4>Evaluation Breakdown:</h4>
+<table>
+<tr><th>Criterion</th><th>Score</th><th>Visual</th></tr>
+<tr>
+<td>Personalization</td>
+<td>4/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 80%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Goal Alignment</td>
+<td>3/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 60%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Tone Appropriateness</td>
+<td>5/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 100%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Clarity Readability</td>
+<td>5/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 100%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Cta Effectiveness</td>
+<td>4/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 80%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Authenticity</td>
+<td>4/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 80%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Relevance</td>
+<td>4/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 80%"></div></div>
+</td>
+</tr>
+</table>
+</div>
+<div class="test-result">
+<div class="test-header">
+<h3>Test #4: LinkedIn DM</h3>
+<span class="score-badge score-poor">2.40/5.0</span>
+</div>
+<h4>Generated Message:</h4>
+<div class="message-box">
+Hi Sarah, just wanted to see if you had a chance to see my previous message. No worries if you&#x27;re busy, but I&#x27;m still interested in connecting!&quot;
+</div>
+<div class="stats-row">
+<div class="stat-item">📏 <strong>Words:</strong> 27</div>
+<div class="stat-item">🔤 <strong>Characters:</strong> 144</div>
+<div class="stat-item">⏱️ <strong>Generation Time:</strong> 9.39s</div>
+</div>
+<h4>Evaluation Breakdown:</h4>
+<table>
+<tr><th>Criterion</th><th>Score</th><th>Visual</th></tr>
+<tr>
+<td>Personalization</td>
+<td>1/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 20%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Goal Alignment</td>
+<td>2/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 40%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Tone Appropriateness</td>
+<td>4/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 80%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Clarity Readability</td>
+<td>5/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 100%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Cta Effectiveness</td>
+<td>1/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 20%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Authenticity</td>
+<td>3/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 60%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Relevance</td>
+<td>1/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 20%"></div></div>
+</td>
+</tr>
+</table>
+</div>
+<div class="test-result">
+<div class="test-header">
+<h3>Test #5: Newsletter</h3>
+<span class="score-badge score-average">3.86/5.0</span>
+</div>
+<h4>Generated Message:</h4>
+<div class="message-box">
+Dear \[Recipient Name],
+&gt;
+&gt; I&#x27;m Dr. Anya Sharma, founder of Momentum AI. As a former AI researcher at Google and a Stanford PhD, I&#x27;m passionate about empowering software engineers like you.
+&gt;
+&gt; I noticed you recently subscribed to our newsletter. At Momentum AI, we&#x27;re at the forefront of AI-powered code optimization. Our tools have helped developers increase efficiency by up to 40%.
+&gt;
+&gt; I&#x27;d like to invite you to explore our latest webinar, where we&#x27;ll deep dive into how you can leverage AI to boost your workflow.
+&gt;
+&gt; Best regards,
+&gt;
+&gt; Dr. Anya Sharma
+&gt; Founder, Momentum AI
+&gt; PhD, Computer Science (Stanford) | ex-Google AI Researcher | Published in *Nature*
+&gt; \[Contact Information]
+</div>
+<div class="stats-row">
+<div class="stat-item">📏 <strong>Words:</strong> 119</div>
+<div class="stat-item">🔤 <strong>Characters:</strong> 689</div>
+<div class="stat-item">⏱️ <strong>Generation Time:</strong> 41.06s</div>
+</div>
+<h4>Evaluation Breakdown:</h4>
+<table>
+<tr><th>Criterion</th><th>Score</th><th>Visual</th></tr>
+<tr>
+<td>Personalization</td>
+<td>3/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 60%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Goal Alignment</td>
+<td>4/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 80%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Tone Appropriateness</td>
+<td>4/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 80%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Clarity Readability</td>
+<td>5/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 100%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Cta Effectiveness</td>
+<td>4/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 80%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Authenticity</td>
+<td>4/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 80%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Relevance</td>
+<td>4/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 80%"></div></div>
+</td>
+</tr>
+</table>
+</div>
+<div class="test-result">
+<div class="test-header">
+<h3>Test #6: Partnership Proposal</h3>
+<span class="score-badge score-excellent">4.57/5.0</span>
+</div>
+<h4>Generated Message:</h4>
+<div class="message-box">
+Dear David,
+&gt;
+&gt; I hope this message finds you well.
+&gt;
+&gt; I’m Rachel Green, CEO of IntegrateHub. We specialize in providing seamless SaaS integration solutions, and I&#x27;ve been following Global Tech Solutions&#x27; recent initiatives with great interest, particularly your focus on AI-driven solutions.
+&gt;
+&gt; At IntegrateHub, we see a significant opportunity to enhance your offerings through our AI integration capabilities. Our platform can seamlessly connect your existing services with cutting-edge AI tools, creating a more robust and user-friendly experience for your clients.
+&gt;
+&gt; I believe a partnership between IntegrateHub and Global Tech Solutions could be incredibly beneficial, and I&#x27;d be thrilled to explore how we can collaborate. Would you be open to a brief call next week to discuss potential synergies?
+&gt;
+&gt; Thank you for your time, and I look forward to the possibility of connecting.
+&gt;
+&gt; Best regards,
+&gt;
+&gt; Rachel Green
+&gt; CEO, IntegrateHub
+</div>
+<div class="stats-row">
+<div class="stat-item">📏 <strong>Words:</strong> 152</div>
+<div class="stat-item">🔤 <strong>Characters:</strong> 946</div>
+<div class="stat-item">⏱️ <strong>Generation Time:</strong> 9.99s</div>
+</div>
+<h4>Evaluation Breakdown:</h4>
+<table>
+<tr><th>Criterion</th><th>Score</th><th>Visual</th></tr>
+<tr>
+<td>Personalization</td>
+<td>4/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 80%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Goal Alignment</td>
+<td>5/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 100%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Tone Appropriateness</td>
+<td>5/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 100%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Clarity Readability</td>
+<td>5/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 100%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Cta Effectiveness</td>
+<td>4/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 80%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Authenticity</td>
+<td>4/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 80%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Relevance</td>
+<td>5/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 100%"></div></div>
+</td>
+</tr>
+</table>
+</div>
+<div class="test-result">
+<div class="test-header">
+<h3>Test #7: Promotional Email</h3>
+<span class="score-badge score-excellent">4.71/5.0</span>
+</div>
+<h4>Generated Message:</h4>
+<div class="message-box">
+Hi [Customer Name],
+&gt;
+&gt; We noticed your recent purchase of [Product Name] and wanted to offer you something special.
+&gt;
+&gt; We&#x27;re excited to introduce our new premium features, designed to take your experience with [Platform Name] to the next level. With these features, you can [list 2-3 key benefits, e.g., &quot;access advanced analytics,&quot; &quot;enjoy priority customer support,&quot; &quot;unlock exclusive content&quot;].
+&gt;
+&gt; As a valued customer, we&#x27;d like to offer you an exclusive 30% discount on your first month of premium features. This is our way of saying thank you for choosing [Platform Name].
+&gt;
+&gt; Claim your discount here: [Link to Premium Features Page]
+&gt;
+&gt; This offer is valid for the next [duration, e.g., &quot;7 days&quot;]. Don&#x27;t miss out!
+&gt;
+&gt; Thanks,
+&gt;
+&gt; The [Platform Name] Team
+&gt;
+</div>
+<div class="stats-row">
+<div class="stat-item">📏 <strong>Words:</strong> 133</div>
+<div class="stat-item">🔤 <strong>Characters:</strong> 766</div>
+<div class="stat-item">⏱️ <strong>Generation Time:</strong> 9.78s</div>
+</div>
+<h4>Evaluation Breakdown:</h4>
+<table>
+<tr><th>Criterion</th><th>Score</th><th>Visual</th></tr>
+<tr>
+<td>Personalization</td>
+<td>4/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 80%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Goal Alignment</td>
+<td>5/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 100%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Tone Appropriateness</td>
+<td>5/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 100%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Clarity Readability</td>
+<td>5/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 100%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Cta Effectiveness</td>
+<td>5/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 100%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Authenticity</td>
+<td>4/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 80%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Relevance</td>
+<td>5/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 100%"></div></div>
+</td>
+</tr>
+</table>
+</div>
+<div class="test-result">
+<div class="test-header">
+<h3>Test #8: Sales Pitch</h3>
+<span class="score-badge score-average">3.70/5.0</span>
+</div>
+<h4>Generated Message:</h4>
+<div class="message-box">
+Hi [Recipient Name],
+&gt;
+&gt; I came across your recent work on [Recipient&#x27;s recent activity], and I was particularly interested in [Specific detail from their activity]. Given your focus on [Recipient&#x27;s recent activity], I thought it might be worthwhile to connect.
+&gt;
+&gt; At [Sender Company Name], we&#x27;ve been helping manufacturing companies like yours streamline their IT infrastructure to improve efficiency and reduce costs. My background in enterprise sales within the manufacturing sector has given me unique insights into the specific challenges companies face.
+&gt;
+&gt; Would you be open to a brief conversation to explore how we might be able to assist [Recipient Company Name]?
+&gt;
+&gt; Best regards,
+&gt;
+&gt; [Sender Name]
+</div>
+<div class="stats-row">
+<div class="stat-item">📏 <strong>Words:</strong> 114</div>
+<div class="stat-item">🔤 <strong>Characters:</strong> 710</div>
+<div class="stat-item">⏱️ <strong>Generation Time:</strong> 10.40s</div>
+</div>
+<h4>Evaluation Breakdown:</h4>
+<table>
+<tr><th>Criterion</th><th>Score</th><th>Visual</th></tr>
+<tr>
+<td>Personalization</td>
+<td>3/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 60%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Goal Alignment</td>
+<td>4/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 80%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Tone Appropriateness</td>
+<td>4/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 80%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Clarity Readability</td>
+<td>5/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 100%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Cta Effectiveness</td>
+<td>3/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 60%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Authenticity</td>
+<td>3/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 60%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Relevance</td>
+<td>4/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 80%"></div></div>
+</td>
+</tr>
+</table>
+</div>
+<div class="test-result">
+<div class="test-header">
+<h3>Test #9: Twitter DM</h3>
+<span class="score-badge score-good">4.14/5.0</span>
+</div>
+<h4>Generated Message:</h4>
+<div class="message-box">
+Hey Alex,
+    &gt;
+    &gt; Great to see you&#x27;re following the startup funding trends! I&#x27;m Dr. Evelyn Reed, and I run Ethos AI. We&#x27;re helping AI startups like ProductFlow nail their product-market fit – actually, we&#x27;ve helped them validate 3x faster.
+    &gt;
+    &gt; Given your interest in ethical AI, I thought you might find this interesting. Any thoughts on the biggest challenges facing AI startups today?
+    &gt;
+    &gt; Best,
+    &gt;
+    &gt; Dr. Evelyn Reed, PhD (Stanford)
+    &gt; Founder &amp; CEO, Ethos AI
+    &gt; [Contact Signature: Include a professional email and a link to the Ethos AI website]
+</div>
+<div class="stats-row">
+<div class="stat-item">📏 <strong>Words:</strong> 96</div>
+<div class="stat-item">🔤 <strong>Characters:</strong> 581</div>
+<div class="stat-item">⏱️ <strong>Generation Time:</strong> 22.19s</div>
+</div>
+<h4>Evaluation Breakdown:</h4>
+<table>
+<tr><th>Criterion</th><th>Score</th><th>Visual</th></tr>
+<tr>
+<td>Personalization</td>
+<td>4/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 80%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Goal Alignment</td>
+<td>4/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 80%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Tone Appropriateness</td>
+<td>5/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 100%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Clarity Readability</td>
+<td>5/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 100%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Cta Effectiveness</td>
+<td>3/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 60%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Authenticity</td>
+<td>4/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 80%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Relevance</td>
+<td>5/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 100%"></div></div>
+</td>
+</tr>
+</table>
+</div>
+<div class="test-result">
+<div class="test-header">
+<h3>Test #10: Warm Introduction</h3>
+<span class="score-badge score-average">3.86/5.0</span>
+</div>
+<h4>Generated Message:</h4>
+<div class="message-box">
+Hi Emily,
+
+&gt; I hope this message finds you well.
+
+&gt; I recently came across your post on LinkedIn discussing content marketing trends, and I found your insights particularly insightful. As a marketing consultant with a focus on content strategy, I&#x27;m always keen to connect with others in the field.
+
+&gt; I&#x27;ve been working with [mention a relevant client or industry] on similar initiatives, and I&#x27;ve found that [briefly mention a specific, valuable insight or observation related to content marketing].
+
+&gt; I&#x27;d be happy to share some of my experiences and insights if you&#x27;re open to a brief chat. Would you be available for a quick call sometime next week?
+
+&gt; Best regards,
+
+&gt; [Sender Name]
+</div>
+<div class="stats-row">
+<div class="stat-item">📏 <strong>Words:</strong> 116</div>
+<div class="stat-item">🔤 <strong>Characters:</strong> 686</div>
+<div class="stat-item">⏱️ <strong>Generation Time:</strong> 10.76s</div>
+</div>
+<h4>Evaluation Breakdown:</h4>
+<table>
+<tr><th>Criterion</th><th>Score</th><th>Visual</th></tr>
+<tr>
+<td>Personalization</td>
+<td>3/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 60%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Goal Alignment</td>
+<td>4/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 80%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Tone Appropriateness</td>
+<td>5/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 100%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Clarity Readability</td>
+<td>5/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 100%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Cta Effectiveness</td>
+<td>4/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 80%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Authenticity</td>
+<td>3/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 60%"></div></div>
+</td>
+</tr>
+<tr>
+<td>Relevance</td>
+<td>4/5</td>
+<td>
+<div class="visual-bar"><div class="visual-fill" style="width: 80%"></div></div>
+</td>
+</tr>
+</table>
+</div>
+
+    </div>
+</body>
+</html>

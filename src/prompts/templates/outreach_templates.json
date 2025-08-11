@@ -1,0 +1,162 @@
+[
+  {
+    "template_id": "T01",
+    "prompt_template": "Compose a short, friendly cold DM to a creator named {{name}} who recently posted about {{topic}}. Start with a compliment and show interest in collaboration. Keep it under 280 characters.",
+    "tone": "Friendly",
+    "use_case": "Creator collaboration",
+    "hook_type": "Personalized + Common Interest",
+    "cta_type": "Soft invitation to chat"
+  },
+  {
+    "template_id": "T02",
+    "prompt_template": "Write a confident B2B pitch for a SaaS founder. Mention how you've helped a similar company like {{company}} reduce churn by {{value}}. End by asking if you can send a 2-min video.",
+    "tone": "Confident",
+    "use_case": "SaaS B2B Outreach",
+    "hook_type": "Industry Pain Point",
+    "cta_type": "Ask to send short content"
+  },
+  {
+    "template_id": "T03",
+    "prompt_template": "Send a warm cold DM referencing a shared community like {{community}}. Mention a recent post from {{name}}, offer help or ideas, and ask if you can share something quick.",
+    "tone": "Warm/Formal",
+    "use_case": "Intro via community",
+    "hook_type": "Mutual Connection Reference",
+    "cta_type": "Ask permission to share idea"
+  },
+  {
+    "template_id": "T04",
+    "prompt_template": "Ask a discovery question to a decision maker about their biggest challenge with {{process/tool}}. Keep the tone curious and open-ended.",
+    "tone": "Curious",
+    "use_case": "Discovery conversation",
+    "hook_type": "Question-led Hook",
+    "cta_type": "Open-ended question"
+  },
+  {
+    "template_id": "T05",
+    "prompt_template": "Write a playful DM using humor to pitch a new tool. Break expectations and add a witty one-liner like 'might not suck'.",
+    "tone": "Playful",
+    "use_case": "Startup founder DM",
+    "hook_type": "Pattern Break + Humor",
+    "cta_type": "Humorous opt-in"
+  },
+  {
+    "template_id": "T06",
+    "prompt_template": "Send a warm message to someone you admire for their recent work on {{project}}. Offer relevant help and ask for a brief chat.",
+    "tone": "Warm",
+    "use_case": "Freelancer to prospect",
+    "hook_type": "Specific Compliment",
+    "cta_type": "Request brief intro call"
+  },
+  {
+    "template_id": "T07",
+    "prompt_template": "Create a timely outreach to a company that recently raised funding. Congratulate them and connect your product to their growth stage.",
+    "tone": "Confident + Timely",
+    "use_case": "B2B sales post-funding",
+    "hook_type": "Trigger Event",
+    "cta_type": "Tie value to event"
+  },
+  {
+    "template_id": "T08",
+    "prompt_template": "Write a sincere DM to a professional you admire. Ask if you can send 2\u20133 questions for career advice.",
+    "tone": "Sincere",
+    "use_case": "Job outreach",
+    "hook_type": "Cold but Kind + Ask",
+    "cta_type": "Ask for 5-min advice"
+  },
+  {
+    "template_id": "T09",
+    "prompt_template": "Reference a blog or newsletter post written by {{name}}. Ask a thoughtful follow-up question and suggest a related idea.",
+    "tone": "Casual",
+    "use_case": "Newsletter/blog engagement",
+    "hook_type": "Content Engagement",
+    "cta_type": "Engage with content + follow-up idea"
+  },
+  {
+    "template_id": "T10",
+    "prompt_template": "Pitch SEO services by highlighting a specific improvement (e.g., 20% traffic gain). Offer to send a 2-pager audit.",
+    "tone": "Direct",
+    "use_case": "Agency pitch",
+    "hook_type": "Value Preview",
+    "cta_type": "Ask to share insight"
+  },
+  {
+    "template_id": "T11",
+    "prompt_template": "Invite someone who shares interest in {{problem}} to brainstorm a solution together informally.",
+    "tone": "Friendly",
+    "use_case": "Co-founder or side project outreach",
+    "hook_type": "Mutual Interest + Collaboration",
+    "cta_type": "Invite for brainstorming"
+  },
+  {
+    "template_id": "T12",
+    "prompt_template": "Send a generous message offering to help with {{need}} based on your experience in {{field}}.",
+    "tone": "Generous",
+    "use_case": "Networking warm-up",
+    "hook_type": "Offer Help First",
+    "cta_type": "Help first, ask later"
+  },
+  {
+    "template_id": "T13",
+    "prompt_template": "Share a bold opinion on a trending topic {{X}} and invite the recipient to discuss or challenge it.",
+    "tone": "Challenging",
+    "use_case": "Thought leadership",
+    "hook_type": "Contrarian POV",
+    "cta_type": "Offer bold insight"
+  },
+  {
+    "template_id": "T14",
+    "prompt_template": "Write a formal DM to introduce your consulting background in {{field}} and suggest a brief intro chat based on their company\u2019s recent work.",
+    "tone": "Formal",
+    "use_case": "Consulting pitch",
+    "hook_type": "Soft Introduction",
+    "cta_type": "Ask for intro call"
+  },
+  {
+    "template_id": "T15",
+    "prompt_template": "Reply to a public post with resonance. Ask if you can DM a short idea based on their post.",
+    "tone": "Direct",
+    "use_case": "Post engagement follow-up",
+    "hook_type": "Reactive Ask",
+    "cta_type": "Reply to open thread"
+  },
+  {
+    "template_id": "T16",
+    "prompt_template": "Request blunt feedback on a 30-second prototype or idea. Be open to critique and keep the tone honest.",
+    "tone": "Curious",
+    "use_case": "Early-stage product validation",
+    "hook_type": "Ask for Feedback",
+    "cta_type": "Request blunt feedback"
+  },
+  {
+    "template_id": "T17",
+    "prompt_template": "Ask the recipient to vote between two versions of a visual/idea (A vs B). Use it to trigger engagement.",
+    "tone": "Creative",
+    "use_case": "Creator community polling",
+    "hook_type": "Question + Visual Prompt",
+    "cta_type": "Ask to vote / give opinion"
+  },
+  {
+    "template_id": "T18",
+    "prompt_template": "Show empathy by referencing a shared struggle (e.g., burnout, layoffs). Acknowledge their post and offer emotional support.",
+    "tone": "Empathetic",
+    "use_case": "Supportive community DM",
+    "hook_type": "Shared Struggle",
+    "cta_type": "Open empathy channel"
+  },
+  {
+    "template_id": "T19",
+    "prompt_template": "Compliment a senior leader on a major accomplishment. Signal admiration and offer to connect if they\u2019re open.",
+    "tone": "Respectful",
+    "use_case": "Executive intro",
+    "hook_type": "High-Achiever Compliment",
+    "cta_type": "Signal admiration + openness"
+  },
+  {
+    "template_id": "T20",
+    "prompt_template": "Write a humorous cold DM that jokingly admits it might be the worst pitch they\u2019ll get today \u2014 but makes it memorable.",
+    "tone": "Playful",
+    "use_case": "Non-serious trial or testing outreach",
+    "hook_type": "Humor + Ice Breaker",
+    "cta_type": "Humor-led CTA"
+  }
+]

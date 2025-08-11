@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "start_time": "2025-07-19T20:49:48.737304",
+    "end_time": "2025-07-19T20:49:51.267583",
+    "total_templates": 5,
+    "successful_tests": 5
+  },
+  "template_tests": [
+    {
+      "scenario_id": "template_friendly_001",
+      "template_id": "T01",
+      "use_case": "Creator collaboration",
+      "timestamp": "2025-07-19T20:49:48.737304",
+      "template": {
+        "template_id": "T01",
+        "prompt_template": "Compose a short, friendly cold DM to a creator named {{name}} who recently posted about {{topic}}. Start with a compliment and show interest in collaboration. Keep it under 280 characters.",
+        "tone": "Friendly",
+        "use_case": "Creator collaboration",
+        "hook_type": "Personalized + Common Interest",
+        "cta_type": "Soft invitation to chat"
+      },
+      "test_data": {
+        "name": "Emma Watson",
+        "topic": "sustainable fashion"
+      },
+      "expected_tone": "Friendly",
+      "criteria_scores": {
+        "contains_compliment": 1.0,
+        "shows_collaboration_interest": 1.0,
+        "under_character_limit": 1.0,
+        "friendly_tone": 1.0
+      },
+      "average_score": 1.0
+    },
+    {
+      "scenario_id": "template_confident_002",
+      "template_id": "T02",
+      "use_case": "SaaS B2B Outreach",
+      "timestamp": "2025-07-19T20:49:49.249131",
+      "template": {
+        "template_id": "T02",
+        "prompt_template": "Write a confident B2B pitch for a SaaS founder. Mention how you've helped a similar company like {{company}} reduce churn by {{value}}. End by asking if you can send a 2-min video.",
+        "tone": "Confident",
+        "use_case": "SaaS B2B Outreach",
+        "hook_type": "Industry Pain Point",
+        "cta_type": "Ask to send short content"
+      },
+      "test_data": {
+        "company": "TechStartup Inc",
+        "value": "35%"
+      },
+      "expected_tone": "Confident",
+      "criteria_scores": {
+        "mentions_similar_company": 1.0,
+        "includes_specific_value": 1.0,
+        "asks_for_video_permission": 1.0,
+        "confident_tone": 1.0
+      },
+      "average_score": 1.0
+    },
+    {
+      "scenario_id": "template_warm_003",
+      "template_id": "T03",
+      "use_case": "Intro via community",
+      "timestamp": "2025-07-19T20:49:49.761018",
+      "template": {
+        "template_id": "T03",
+        "prompt_template": "Send a warm cold DM referencing a shared community like {{community}}. Mention a recent post from {{name}}, offer help or ideas, and ask if you can share something quick.",
+        "tone": "Warm/Formal",
+        "use_case": "Intro via community",
+        "hook_type": "Mutual Connection Reference",
+        "cta_type": "Ask permission to share idea"
+      },
+      "test_data": {
+        "community": "Product Hunt Makers",
+        "name": "John Smith"
+      },
+      "expected_tone": "Warm/Formal",
+      "criteria_scores": {
+        "references_community": 1.0,
+        "mentions_recent_post": 1.0,
+        "offers_help": 1.0,
+        "asks_permission": 1.0
+      },
+      "average_score": 1.0
+    },
+    {
+      "scenario_id": "template_curious_004",
+      "template_id": "T04",
+      "use_case": "Discovery conversation",
+      "timestamp": "2025-07-19T20:49:50.261876",
+      "template": {
+        "template_id": "T04",
+        "prompt_template": "Ask a discovery question to a decision maker about their biggest challenge with {{process/tool}}. Keep the tone curious and open-ended.",
+        "tone": "Curious",
+        "use_case": "Discovery conversation",
+        "hook_type": "Question-led Hook",
+        "cta_type": "Open-ended question"
+      },
+      "test_data": {
+        "process/tool": "customer onboarding"
+      },
+      "expected_tone": "Curious",
+      "criteria_scores": {
+        "asks_discovery_question": 1.0,
+        "open_ended": 1.0,
+        "curious_tone": 1.0,
+        "about_specific_challenge": 1.0
+      },
+      "average_score": 1.0
+    },
+    {
+      "scenario_id": "template_playful_005",
+      "template_id": "T05",
+      "use_case": "Startup founder DM",
+      "timestamp": "2025-07-19T20:49:50.763091",
+      "template": {
+        "template_id": "T05",
+        "prompt_template": "Write a playful DM using humor to pitch a new tool. Break expectations and add a witty one-liner like 'might not suck'.",
+        "tone": "Playful",
+        "use_case": "Startup founder DM",
+        "hook_type": "Pattern Break + Humor",
+        "cta_type": "Humorous opt-in"
+      },
+      "test_data": {},
+      "expected_tone": "Playful",
+      "criteria_scores": {
+        "uses_humor": 1.0,
+        "breaks_pattern": 1.0,
+        "includes_witty_line": 1.0,
+        "playful_tone": 1.0
+      },
+      "average_score": 1.0
+    }
+  ],
+  "aggregate_scores": {
+    "overall_average": 1.0,
+    "by_tone": {
+      "Friendly": 1.0,
+      "Confident": 1.0,
+      "Warm/Formal": 1.0,
+      "Curious": 1.0,
+      "Playful": 1.0
+    },
+    "by_use_case": {
+      "Creator collaboration": 1.0,
+      "SaaS B2B Outreach": 1.0,
+      "Intro via community": 1.0,
+      "Discovery conversation": 1.0,
+      "Startup founder DM": 1.0
+    }
+  }
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="ghostGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4F46E5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6366F1;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="messageGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34D399;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Ghost Body -->
+  <path d="M200 60 C160 60 130 90 130 130 L130 280 C130 300 140 310 150 310 C160 310 170 300 180 290 C190 300 210 300 220 290 C230 300 250 300 260 290 C270 300 280 310 290 310 C300 310 310 300 310 280 L310 130 C310 90 280 60 240 60 Z" 
+        fill="url(#ghostGradient)" 
+        stroke="none"/>
+  
+  <!-- Ghost Eyes -->
+  <circle cx="175" cy="140" r="8" fill="#1F2937"/>
+  <circle cx="225" cy="140" r="8" fill="#1F2937"/>
+  
+  <!-- Ghost Mouth (subtle smile) -->
+  <path d="M185 170 Q200 180 215 170" 
+        stroke="#1F2937" 
+        stroke-width="3" 
+        fill="none" 
+        stroke-linecap="round"/>
+  
+  <!-- Message Bubble -->
+  <circle cx="280" cy="120" r="45" fill="url(#messageGradient)" opacity="0.9"/>
+  
+  <!-- Message Lines -->
+  <line x1="260" y1="110" x2="300" y2="110" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <line x1="260" y1="120" x2="295" y2="120" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <line x1="260" y1="130" x2="290" y2="130" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Message Bubble Tail -->
+  <path d="M250 140 L240 155 L260 150 Z" fill="url(#messageGradient)" opacity="0.9"/>
+  
+  <!-- AI Circuit Pattern (subtle) -->
+  <g opacity="0.3">
+    <circle cx="160" cy="200" r="2" fill="#E5E7EB"/>
+    <circle cx="180" cy="220" r="2" fill="#E5E7EB"/>
+    <circle cx="220" cy="220" r="2" fill="#E5E7EB"/>
+    <circle cx="240" cy="200" r="2" fill="#E5E7EB"/>
+    <line x1="160" y1="200" x2="180" y2="220" stroke="#E5E7EB" stroke-width="1"/>
+    <line x1="180" y1="220" x2="220" y2="220" stroke="#E5E7EB" stroke-width="1"/>
+    <line x1="220" y1="220" x2="240" y2="200" stroke="#E5E7EB" stroke-width="1"/>
+  </g>
+</svg> 

@@ -1,0 +1,64 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.coverage
+.coverage.*
+agent_history.gif
+static/browser_history/*.gif
+
+# Virtual environments
+.venv
+venv/
+
+# Environment variables
+.env
+
+# user conf
+conf.yaml
+
+.idea/
+.langgraph_api/
+
+# coverage report
+coverage.xml
+coverage/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dev-debug.log
+# Dependency directories
+node_modules/
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+# OS specific
+.DS_Store
+
+# Added by Task Master AI
+
+# AI Coding Assistant Configuration Directories
+.roo/
+.taskmaster/
+.cursor/
+.clinerules/
+.trae/
+.windsurf/
+.windsurfrules
+.roomodes 
+
+# Task files
+# tasks.json
+# tasks/ 

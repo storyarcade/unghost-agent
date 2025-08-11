@@ -1,0 +1,15 @@
+# Unghost Benchmark System Requirements
+# These are in addition to the main unghost requirements
+
+# Async HTTP client for API calls
+aiohttp>=3.8.0
+
+# The main project already includes these, but listing for clarity:
+# langchain-openai
+# langchain-core
+# pydantic
+
+# Optional: For enhanced reporting capabilities
+# matplotlib>=3.5.0  # For generating charts
+# pandas>=1.4.0      # For data analysis
+# jinja2>=3.0.0      # For advanced HTML templating

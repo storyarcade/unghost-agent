@@ -1,0 +1,88 @@
+name: Deploy to Cloud Run
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+env:
+  PROJECT_ID: named-aspect-460519-v1
+  REGION: us-central1
+  BACKEND_SERVICE: unghost-backend
+  FRONTEND_SERVICE: unghost-frontend
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Authenticate to Google Cloud
+      uses: google-github-actions/auth@v2
+      with:
+        credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+    - name: Set up Cloud SDK
+      uses: google-github-actions/setup-gcloud@v2
+
+    - name: Configure Docker for GCR
+      run: gcloud auth configure-docker
+
+    - name: Build and Push Backend
+      run: |
+        docker build -t gcr.io/${{ env.PROJECT_ID }}/${{ env.BACKEND_SERVICE }}:${{ github.sha }} -f Dockerfile.backend .
+        docker push gcr.io/${{ env.PROJECT_ID }}/${{ env.BACKEND_SERVICE }}:${{ github.sha }}
+
+    - name: Deploy Backend to Cloud Run
+      run: |
+        gcloud run deploy ${{ env.BACKEND_SERVICE }} \
+          --image gcr.io/${{ env.PROJECT_ID }}/${{ env.BACKEND_SERVICE }}:${{ github.sha }} \
+          --platform managed \
+          --region ${{ env.REGION }} \
+          --allow-unauthenticated \
+          --set-env-vars="PORT=8080,SEARCH_API=tavily,GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }},TAVILY_API_KEY=${{ secrets.TAVILY_API_KEY }},GOOGLE_API_KEY=${{ secrets.GOOGLE_API_KEY }}" \
+          --memory 2Gi \
+          --cpu 2 \
+          --timeout 300 \
+          --project ${{ env.PROJECT_ID }}
+
+    - name: Get Backend URL
+      id: backend-url
+      run: |
+        BACKEND_URL=$(gcloud run services describe ${{ env.BACKEND_SERVICE }} \
+          --platform managed \
+          --region ${{ env.REGION }} \
+          --format 'value(status.url)' \
+          --project ${{ env.PROJECT_ID }})
+        echo "url=$BACKEND_URL" >> $GITHUB_OUTPUT
+
+    - name: Build and Push Frontend
+      run: |
+        docker build -t gcr.io/${{ env.PROJECT_ID }}/${{ env.FRONTEND_SERVICE }}:${{ github.sha }} -f Dockerfile.frontend .
+        docker push gcr.io/${{ env.PROJECT_ID }}/${{ env.FRONTEND_SERVICE }}:${{ github.sha }}
+
+    - name: Deploy Frontend to Cloud Run
+      run: |
+        gcloud run deploy ${{ env.FRONTEND_SERVICE }} \
+          --image gcr.io/${{ env.PROJECT_ID }}/${{ env.FRONTEND_SERVICE }}:${{ github.sha }} \
+          --platform managed \
+          --region ${{ env.REGION }} \
+          --allow-unauthenticated \
+          --set-env-vars="NEXT_PUBLIC_API_URL=${{ steps.backend-url.outputs.url }},SKIP_ENV_VALIDATION=true,NODE_ENV=production" \
+          --memory 1Gi \
+          --cpu 1 \
+          --project ${{ env.PROJECT_ID }}
+
+    - name: Output URLs
+      run: |
+        echo "✅ Deployment Complete!"
+        echo "Backend URL: ${{ steps.backend-url.outputs.url }}"
+        FRONTEND_URL=$(gcloud run services describe ${{ env.FRONTEND_SERVICE }} \
+          --platform managed \
+          --region ${{ env.REGION }} \
+          --format 'value(status.url)' \
+          --project ${{ env.PROJECT_ID }})
+        echo "Frontend URL: $FRONTEND_URL"

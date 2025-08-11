@@ -1,0 +1,331 @@
+{
+  "scenarios": [
+    {
+      "id": "linkedin_dm_001",
+      "use_case": "LinkedIn DM",
+      "category": "professional_networking",
+      "recipient": {
+        "name": "Sarah Chen",
+        "role": "Product Manager",
+        "company": "TechCorp",
+        "recent_activity": "Posted about AI trends in product management and the importance of human-centric design",
+        "interests": ["AI/ML", "Product Strategy", "Team Leadership", "Design Thinking"],
+        "profile_summary": "10+ years in product management, focused on AI-powered B2B solutions"
+      },
+      "sender": {
+        "name": "Alex Thompson",
+        "background": "AI startup founder with 5 years experience building B2B SaaS products",
+        "company": "InnovateAI",
+        "objective": "Connect and discuss potential collaboration on AI product strategy",
+        "value_proposition": "Successfully implemented AI in 3 enterprise products with 40% efficiency gains"
+      },
+      "expected_elements": [
+        "reference to AI trends post",
+        "mention of human-centric design alignment",
+        "soft CTA for coffee chat or virtual meeting",
+        "professional but friendly tone",
+        "specific value proposition",
+        "mutual interest in AI product management"
+      ],
+      "evaluation_weight": 1.0
+    },
+    {
+      "id": "twitter_dm_002",
+      "use_case": "Twitter DM",
+      "category": "influencer_outreach",
+      "recipient": {
+        "name": "Alex Rodriguez",
+        "role": "Tech Influencer",
+        "company": "Independent",
+        "recent_activity": "Tweeted about startup funding trends and the importance of product-market fit",
+        "interests": ["Startups", "Product Development", "Venture Capital", "Tech Trends"],
+        "profile_summary": "50K followers, writes about startup ecosystem and product innovation"
+      },
+      "sender": {
+        "name": "Jordan Lee",
+        "background": "Early-stage startup founder seeking product feedback",
+        "company": "ProductFlow",
+        "objective": "Get feedback on our product and potentially feature in their content",
+        "value_proposition": "Building a tool that helps startups validate product-market fit 3x faster"
+      },
+      "expected_elements": [
+        "reference to funding trends tweet",
+        "mention product-market fit connection",
+        "friendly conversational tone",
+        "low-pressure invitation to try product",
+        "offer to provide exclusive insights or demo",
+        "authentic enthusiasm without being salesy"
+      ],
+      "evaluation_weight": 1.0
+    },
+    {
+      "id": "cold_email_003",
+      "use_case": "Cold Email",
+      "category": "b2b_sales",
+      "recipient": {
+        "name": "Michael Johnson",
+        "role": "CTO",
+        "company": "Enterprise Solutions Inc",
+        "recent_activity": "Company just raised Series B funding of $50M to scale their infrastructure",
+        "interests": ["Cloud Architecture", "DevOps", "Security", "Team Scaling"],
+        "profile_summary": "Former Google engineer, now leading 200+ person engineering team"
+      },
+      "sender": {
+        "name": "Emma Williams",
+        "background": "B2B SaaS founder with enterprise security focus",
+        "company": "SecureScale",
+        "objective": "Schedule a demo of our enterprise security platform",
+        "value_proposition": "Helped 5 unicorns reduce security incidents by 70% during rapid scaling"
+      },
+      "expected_elements": [
+        "congratulations on Series B funding",
+        "reference to scaling challenges",
+        "specific security concerns during growth",
+        "credibility with similar companies",
+        "clear CTA for 20-minute demo",
+        "professional executive tone"
+      ],
+      "evaluation_weight": 1.2
+    },
+    {
+      "id": "investor_pitch_004",
+      "use_case": "Investor Pitch",
+      "category": "fundraising",
+      "recipient": {
+        "name": "Dr. Emily Wang",
+        "role": "Partner",
+        "company": "Innovation Ventures",
+        "recent_activity": "Invested in 3 AI startups this quarter, spoke at AI Summit about ethical AI",
+        "interests": ["AI/ML", "B2B SaaS", "Healthcare Tech", "Ethical AI"],
+        "profile_summary": "PhD in Computer Science, 15 years in venture capital, $500M AUM"
+      },
+      "sender": {
+        "name": "David Park",
+        "background": "AI startup founder seeking Series A, previously exited a healthtech startup",
+        "company": "EthicalAI Solutions",
+        "objective": "Secure Series A funding of $10M",
+        "value_proposition": "Building explainable AI for healthcare with 3 pilot hospitals showing 25% better outcomes"
+      },
+      "expected_elements": [
+        "reference to recent AI investments",
+        "mention ethical AI alignment",
+        "traction metrics upfront",
+        "previous exit credibility",
+        "specific ask and use of funds",
+        "data-driven but visionary tone"
+      ],
+      "evaluation_weight": 1.5
+    },
+    {
+      "id": "partnership_proposal_005",
+      "use_case": "Partnership Proposal",
+      "category": "strategic_partnerships",
+      "recipient": {
+        "name": "David Kim",
+        "role": "Head of Business Development",
+        "company": "Global Tech Solutions",
+        "recent_activity": "Announced new partnership program for AI integration partners",
+        "interests": ["Strategic Partnerships", "AI Integration", "Enterprise Solutions", "Revenue Growth"],
+        "profile_summary": "Built partnership ecosystems at 3 Fortune 500 companies"
+      },
+      "sender": {
+        "name": "Rachel Green",
+        "background": "SaaS company CEO with strong integration capabilities",
+        "company": "IntegrateHub",
+        "objective": "Propose strategic partnership for AI integration services",
+        "value_proposition": "200+ successful enterprise integrations, certified in all major AI platforms"
+      },
+      "expected_elements": [
+        "reference to partnership program announcement",
+        "mutual benefits clearly outlined",
+        "integration expertise credentials",
+        "revenue opportunity quantified",
+        "collaborative tone",
+        "next steps for partnership discussion"
+      ],
+      "evaluation_weight": 1.1
+    },
+    {
+      "id": "instagram_dm_006",
+      "use_case": "Instagram DM",
+      "category": "influencer_collaboration",
+      "recipient": {
+        "name": "Lily Wang",
+        "role": "Fashion Influencer",
+        "company": "Independent",
+        "recent_activity": "Posted a story about sustainable fashion and the need for eco-friendly brands",
+        "interests": ["Sustainable Fashion", "Eco-Living", "Brand Collaborations", "Content Creation"],
+        "profile_summary": "100K followers, focuses on sustainable lifestyle and fashion"
+      },
+      "sender": {
+        "name": "Sophie Martinez",
+        "background": "Sustainable fashion brand founder",
+        "company": "EcoThreads",
+        "objective": "Collaborate on co-branded sustainable fashion campaign",
+        "value_proposition": "100% organic materials, carbon-neutral shipping, 1% for the planet member"
+      },
+      "expected_elements": [
+        "reference to sustainable fashion story",
+        "shared values emphasis",
+        "creative campaign ideas",
+        "warm and authentic tone",
+        "visual collaboration opportunities",
+        "mutual benefit for audiences"
+      ],
+      "evaluation_weight": 0.9
+    },
+    {
+      "id": "newsletter_007",
+      "use_case": "Newsletter",
+      "category": "email_marketing",
+      "recipient": {
+        "name": "Newsletter Subscribers",
+        "role": "Engaged Audience",
+        "company": "Various",
+        "recent_activity": "Subscribed to product updates and industry insights last month",
+        "interests": ["Product Updates", "Industry Trends", "Best Practices", "Case Studies"],
+        "profile_summary": "5,000 active subscribers, 35% open rate, B2B professionals"
+      },
+      "sender": {
+        "name": "Content Team",
+        "background": "B2B SaaS company with thought leadership focus",
+        "company": "TechInsights",
+        "objective": "Drive webinar registrations and product engagement",
+        "value_proposition": "Weekly insights that help teams work 30% more efficiently"
+      },
+      "expected_elements": [
+        "value-first content",
+        "personalized greeting",
+        "industry insights",
+        "clear webinar CTA",
+        "social proof elements",
+        "helpful and engaging tone"
+      ],
+      "evaluation_weight": 0.8
+    },
+    {
+      "id": "sales_pitch_008",
+      "use_case": "Sales Pitch",
+      "category": "direct_sales",
+      "recipient": {
+        "name": "John Smith",
+        "role": "Head of IT",
+        "company": "Manufacturing Corp",
+        "recent_activity": "Attended a webinar on cloud security and compliance in manufacturing",
+        "interests": ["IT Security", "Cloud Migration", "Compliance", "Cost Optimization"],
+        "profile_summary": "20 years in IT, managing 50-person team, budget owner"
+      },
+      "sender": {
+        "name": "Mark Thompson",
+        "background": "Enterprise sales rep with manufacturing expertise",
+        "company": "CloudSecure Pro",
+        "objective": "Book a meeting to discuss security solutions",
+        "value_proposition": "Reduced security costs by 40% for 10 manufacturing clients while improving compliance"
+      },
+      "expected_elements": [
+        "reference to webinar attendance",
+        "manufacturing-specific pain points",
+        "compliance expertise",
+        "ROI focused messaging",
+        "consultative approach",
+        "clear meeting request"
+      ],
+      "evaluation_weight": 1.3
+    },
+    {
+      "id": "warm_intro_009",
+      "use_case": "Warm Introduction",
+      "category": "networking",
+      "recipient": {
+        "name": "Emily Lee",
+        "role": "VP Marketing",
+        "company": "Growth Strategies Inc",
+        "recent_activity": "Commented on mutual connection David's post about brand storytelling",
+        "interests": ["Brand Strategy", "Content Marketing", "Growth Marketing", "Team Building"],
+        "profile_summary": "Built marketing teams at 3 successful startups, advisor to 5 companies"
+      },
+      "sender": {
+        "name": "Chris Anderson",
+        "background": "Marketing consultant seeking advisory opportunities",
+        "company": "Anderson Consulting",
+        "objective": "Explore potential advisory or consulting engagement",
+        "value_proposition": "Helped 20+ startups build scalable marketing engines"
+      },
+      "expected_elements": [
+        "mention of David as mutual connection",
+        "reference to brand storytelling comment",
+        "shared marketing philosophy",
+        "warm and respectful tone",
+        "value-add positioning",
+        "soft ask for conversation"
+      ],
+      "evaluation_weight": 1.0
+    },
+    {
+      "id": "promotional_email_010",
+      "use_case": "Promotional Email",
+      "category": "promotional",
+      "recipient": {
+        "name": "Customer List",
+        "role": "Existing Customers",
+        "company": "Various",
+        "recent_activity": "Purchased in the last 6 months, average order value $500",
+        "interests": ["Product Updates", "Exclusive Deals", "New Features", "Customer Success"],
+        "profile_summary": "1,000 active customers, 60% repeat purchase rate"
+      },
+      "sender": {
+        "name": "Sales Team",
+        "background": "E-commerce platform with B2B focus",
+        "company": "BusinessHub",
+        "objective": "Drive sales during limited-time promotion",
+        "value_proposition": "Exclusive 30% discount for loyal customers on new premium features"
+      },
+      "expected_elements": [
+        "exclusive customer appreciation",
+        "urgency without being pushy",
+        "clear discount value",
+        "limited-time emphasis",
+        "easy purchase process",
+        "enthusiastic but professional tone"
+      ],
+      "evaluation_weight": 0.7
+    }
+  ],
+  "evaluation_criteria": {
+    "personalization": {
+      "weight": 0.2,
+      "description": "Does the message reference specific details about the recipient and their recent activity?"
+    },
+    "goal_alignment": {
+      "weight": 0.15,
+      "description": "Does the message clearly align with the stated objective?"
+    },
+    "tone_appropriateness": {
+      "weight": 0.15,
+      "description": "Is the tone suitable for the channel, recipient, and context?"
+    },
+    "clarity_readability": {
+      "weight": 0.1,
+      "description": "Is the message clear, concise, and easy to understand?"
+    },
+    "cta_effectiveness": {
+      "weight": 0.15,
+      "description": "Is there a clear, actionable, and appropriate call-to-action?"
+    },
+    "authenticity": {
+      "weight": 0.15,
+      "description": "Does the message feel genuine, human-like, and avoid generic templates?"
+    },
+    "relevance": {
+      "weight": 0.1,
+      "description": "Does the message reference recent activity, trends, or mutual interests?"
+    }
+  },
+  "scoring_guidelines": {
+    "5": "Exceptional - Exceeds expectations in every way",
+    "4": "Good - Solid execution with minor areas for improvement",
+    "3": "Average - Acceptable but missing key elements",
+    "2": "Below Average - Several significant issues",
+    "1": "Poor - Fails to meet basic requirements"
+  }
+}

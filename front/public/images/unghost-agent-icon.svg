@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="ghostGradientIcon" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4F46E5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6366F1;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="messageGradientIcon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34D399;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Ghost Body -->
+  <path d="M100 30 C80 30 65 45 65 65 L65 140 C65 150 70 155 75 155 C80 155 85 150 90 145 C95 150 105 150 110 145 C115 150 125 150 130 145 C135 150 140 155 145 155 C150 155 155 150 155 140 L155 65 C155 45 140 30 120 30 Z" 
+        fill="url(#ghostGradientIcon)" 
+        stroke="none"/>
+  
+  <!-- Ghost Eyes -->
+  <circle cx="87" cy="70" r="4" fill="#1F2937"/>
+  <circle cx="113" cy="70" r="4" fill="#1F2937"/>
+  
+  <!-- Ghost Mouth (subtle smile) -->
+  <path d="M92 85 Q100 90 108 85" 
+        stroke="#1F2937" 
+        stroke-width="2" 
+        fill="none" 
+        stroke-linecap="round"/>
+  
+  <!-- Message Bubble -->
+  <circle cx="140" cy="60" r="22" fill="url(#messageGradientIcon)" opacity="0.9"/>
+  
+  <!-- Message Lines -->
+  <line x1="130" y1="55" x2="150" y2="55" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <line x1="130" y1="60" x2="147" y2="60" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <line x1="130" y1="65" x2="145" y2="65" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Message Bubble Tail -->
+  <path d="M125 70 L120 78 L130 75 Z" fill="url(#messageGradientIcon)" opacity="0.9"/>
+</svg> 
