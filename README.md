@@ -37,9 +37,13 @@ This project stands on the shoulders of giants.
 
 Check out our main demo video to see how Unghost Agent transforms cold outreach:
 
-<video src="https://github.com/storyarcade/unghost-agent/raw/main/videos/case-demo.mp4" controls width="100%" style="max-width: 800px;">
-  Your browser does not support the video tag. [Watch on YouTube](https://youtu.be/Xby-GjTR6Fs?si=wIBZUbknh54FgzqH)
-</video>
+<div align="center">
+  <a href="https://youtu.be/Xby-GjTR6Fs?si=wIBZUbknh54FgzqH" target="_blank">
+    <img src="https://img.youtube.com/vi/Xby-GjTR6Fs/maxresdefault.jpg" alt="Unghost Agent Demo" width="80%" style="border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+  </a>
+  <br>
+  <em>Click to watch the full demo on YouTube</em>
+</div>
 
 ### 🚀 Example Use Cases
 
@@ -47,46 +51,56 @@ See how Unghost Agent works across different scenarios:
 
 <table>
 <tr>
-<td width="50%">
+<td width="50%" align="center">
 
 #### 1. Coffee Meeting Outreach
 
-<video src="https://github.com/storyarcade/unghost-agent/raw/main/videos/case1.MOV" controls width="100%">
-  Your browser does not support the video tag.
-</video>
+<a href="https://youtu.be/Lubsoq_A8UQ?si=tbLZLA4EkTQkX-y0" target="_blank">
+  <img src="https://img.youtube.com/vi/Lubsoq_A8UQ/hqdefault.jpg" alt="Coffee Meeting Example" width="90%" style="border-radius: 8px;">
+</a>
+<br>
+<em>☕ Warm, personal approach</em>
 
 </td>
-<td width="50%">
+<td width="50%" align="center">
 
-#### 2. VC Outreach Strategy (Elon Case)
+#### 2. VC Outreach Strategy
 
-<video src="https://github.com/storyarcade/unghost-agent/raw/main/videos/Elon-case2.MOV" controls width="100%">
-  Your browser does not support the video tag.
-</video>
+<a href="https://youtu.be/6pQ1YecwfLI?si=s-nLVv0MzWCJd8OL" target="_blank">
+  <img src="https://img.youtube.com/vi/6pQ1YecwfLI/hqdefault.jpg" alt="VC Outreach Example" width="90%" style="border-radius: 8px;">
+</a>
+<br>
+<em>🚀 Data-driven pitch strategy</em>
 
 </td>
 </tr>
 <tr>
-<td width="50%">
+<td width="50%" align="center">
 
 #### 3. Cold DM Strategy
 
-<video src="https://github.com/storyarcade/unghost-agent/raw/main/videos/case3.MOV" controls width="100%">
-  Your browser does not support the video tag.
-</video>
+<a href="https://youtu.be/3az8LpQxxMo?si=9dh2DSbvP1FoXxuM" target="_blank">
+  <img src="https://img.youtube.com/vi/3az8LpQxxMo/hqdefault.jpg" alt="Cold DM Example" width="90%" style="border-radius: 8px;">
+</a>
+<br>
+<em>💬 Direct & compelling messaging</em>
 
 </td>
-<td width="50%">
+<td width="50%" align="center">
 
 #### 4. Friendly CEO Approach
 
-<video src="https://github.com/storyarcade/unghost-agent/raw/main/videos/case4.MOV" controls width="100%">
-  Your browser does not support the video tag.
-</video>
+<a href="https://youtu.be/BFuMQ5lWlDo?si=3xzx621zxm4A5yKq" target="_blank">
+  <img src="https://img.youtube.com/vi/BFuMQ5lWlDo/hqdefault.jpg" alt="Friendly CEO Example" width="90%" style="border-radius: 8px;">
+</a>
+<br>
+<em>🤝 Peer-to-peer connection</em>
 
 </td>
 </tr>
 </table>
+
+> 💡 **Pro Tip**: Each video demonstrates a different outreach style. Watch them all to master the full spectrum of personalization strategies!
 
 ## 🎬 Quick Start (2 Minutes, Seriously)
 
