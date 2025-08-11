@@ -54,40 +54,63 @@ Check out our main demo video to see how Unghost Agent transforms cold outreach:
 
 See how Unghost Agent works across different scenarios:
 
+> ⚠️ **To enable native video playback in GitHub README:**
+> 1. Download these videos from YouTube
+> 2. Create a new issue in your repo
+> 3. Drag and drop the video files into the issue comment
+> 4. Copy the generated GitHub URLs
+> 5. Replace the sections below with: `<video src="URL" controls width="100%"></video>`
+
 <table>
 <tr>
 <td width="50%">
 
-#### 1. Tech Startup Outreach
-[🎥 Watch Video](https://youtu.be/Lubsoq_A8UQ?si=tbLZLA4EkTQkX-y0)
+#### 1. Coffee Meeting Outreach
+[🎥 Watch on YouTube](https://youtu.be/Lubsoq_A8UQ?si=tbLZLA4EkTQkX-y0)
 
-[![Tech Startup Example](https://img.youtube.com/vi/Lubsoq_A8UQ/mqdefault.jpg)](https://youtu.be/Lubsoq_A8UQ?si=tbLZLA4EkTQkX-y0)
+<!-- Replace with native video:
+<video src="https://github.com/storyarcade/unghost-agent/assets/YOUR_VIDEO.mp4" controls width="100%"></video>
+-->
+
+[![Coffee Meeting Example](https://img.youtube.com/vi/Lubsoq_A8UQ/mqdefault.jpg)](https://youtu.be/Lubsoq_A8UQ?si=tbLZLA4EkTQkX-y0)
 
 </td>
 <td width="50%">
 
-#### 2. Enterprise Sales Strategy
-[🎥 Watch Video](https://youtu.be/6pQ1YecwfLI?si=s-nLVv0MzWCJd8OL)
+#### 2. VC Outreach Strategy
+[🎥 Watch on YouTube](https://youtu.be/6pQ1YecwfLI?si=s-nLVv0MzWCJd8OL)
 
-[![Enterprise Sales Example](https://img.youtube.com/vi/6pQ1YecwfLI/mqdefault.jpg)](https://youtu.be/6pQ1YecwfLI?si=s-nLVv0MzWCJd8OL)
+<!-- Replace with native video:
+<video src="https://github.com/storyarcade/unghost-agent/assets/YOUR_VIDEO.mp4" controls width="100%"></video>
+-->
+
+[![VC Outreach Example](https://img.youtube.com/vi/6pQ1YecwfLI/mqdefault.jpg)](https://youtu.be/6pQ1YecwfLI?si=s-nLVv0MzWCJd8OL)
 
 </td>
 </tr>
 <tr>
 <td width="50%">
 
-#### 3. Creative Agency Prospecting
-[🎥 Watch Video](https://youtu.be/3az8LpQxxMo?si=9dh2DSbvP1FoXxuM)
+#### 3. Cold DM Strategy
+[🎥 Watch on YouTube](https://youtu.be/3az8LpQxxMo?si=9dh2DSbvP1FoXxuM)
 
-[![Creative Agency Example](https://img.youtube.com/vi/3az8LpQxxMo/mqdefault.jpg)](https://youtu.be/3az8LpQxxMo?si=9dh2DSbvP1FoXxuM)
+<!-- Replace with native video:
+<video src="https://github.com/storyarcade/unghost-agent/assets/YOUR_VIDEO.mp4" controls width="100%"></video>
+-->
+
+[![Cold DM Example](https://img.youtube.com/vi/3az8LpQxxMo/mqdefault.jpg)](https://youtu.be/3az8LpQxxMo?si=9dh2DSbvP1FoXxuM)
 
 </td>
 <td width="50%">
 
-#### 4. SaaS Growth Hacking
-[🎥 Watch Video](https://youtu.be/BFuMQ5lWlDo?si=3xzx621zxm4A5yKq)
+#### 4. Friendly CEO Approach
+[🎥 Watch on YouTube](https://youtu.be/BFuMQ5lWlDo?si=3xzx621zxm4A5yKq)
 
-[![SaaS Growth Example](https://img.youtube.com/vi/BFuMQ5lWlDo/mqdefault.jpg)](https://youtu.be/BFuMQ5lWlDo?si=3xzx621zxm4A5yKq)
+<!-- Replace with native video:
+<video src="https://github.com/storyarcade/unghost-agent/assets/YOUR_VIDEO.mp4" controls width="100%"></video>
+-->
+
+[![Friendly CEO Example](https://img.youtube.com/vi/BFuMQ5lWlDo/mqdefault.jpg)](https://youtu.be/BFuMQ5lWlDo?si=3xzx621zxm4A5yKq)
 
 </td>
 </tr>
